@@ -4,7 +4,7 @@ module Searchjoy
 
     # the devise way
     if (Rails::VERSION::MAJOR == 3 && !defined?(ActionController::StrongParameters)) || defined?(ActiveModel::MassAssignmentSecurity)
-      attr_accessible :search_type, :query, :results_count
+      attr_accessible :search_type, :query, :results_count, :user_id
     end
 
     before_save :set_normalized_query
