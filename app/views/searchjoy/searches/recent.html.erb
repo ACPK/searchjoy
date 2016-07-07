@@ -5,7 +5,7 @@
     </td>
     <td>
     <%= search.query %>
-    <% if search.user %>
+    <% if search.user.present? %>
       <br />
       By: <%= search.user.display_name %>
     <% end %>
