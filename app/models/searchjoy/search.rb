@@ -1,6 +1,7 @@
 module Searchjoy
   class Search < ActiveRecord::Base
     belongs_to :convertable, polymorphic: true
+    belongs_to :user, polymorphic: true
 
     # the devise way
     if (Rails::VERSION::MAJOR == 3 && !defined?(ActionController::StrongParameters)) || defined?(ActiveModel::MassAssignmentSecurity)
